@@ -7,8 +7,35 @@
     <title>Game of Life</title>
 </head>
 <body>
-    <button id="start">Start Simulation</button>
-    <button id="stop">Stop Simulation</button>
-    <script src="./main.js"></script>
+    <div id="main">
+        <div class="content">
+            <div class="title">
+                <h1>Neo's Matrix of Life</h1>
+                <h4>An iteration of Conway's Game of Life</h4>
+            </div>
+
+            <div class="text">
+                <p>
+                    Click individuals to kill them or raise them from the dead.<br/>
+                    <span id="subtext">(Click to turn cells white or black)</span>
+                </p>
+                <p>
+                    Click and drag to raise the dead. <br/>
+                    <span id="subtext">(Click and drag to turn cells black)</span>
+                </p>
+                <p>Sorry, didn't think giving you the power of genocide was a good idea.<br/>
+                    <span id="subtext">(Can't click and drag to erase turn cells white)</span>
+                </p>
+            </div>
+            <div class="buttons">
+                <button id="start">Start Simulation</button>
+                <button id="stop">Stop Simulation</button>
+            </div>
+        </div>
+
+        <div id="boardArea"></div>
+        
+        <script src="./main.js"></script>
+    </div>
 </body>
 </html>

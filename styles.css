@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Handjet', cursive;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#boardArea {
+    width: 45%;
+}
+
+.content {
+    width: 45%;
+    height: 80%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+}
+
+#subtext {
+    font-size: 8px;
+}
+
+.content h1 {
+    margin-bottom: 0;
+}
+
 .cell  {
     border: 1px solid black;
 }

@@ -1,17 +1,17 @@
 const DEAD = 0;
 const ALIVE = 1;
-const rows = 80;
-const cols = 80;
-const cellSize = 10;
+const rows = 50;
+const cols = 50;
+const cellSize = 15;
 const startBtn = document.getElementById('start');
 const stopBtn = document.getElementById('stop');
+const boardArea = document.getElementById('boardArea');
 let drag = false;
 let lifeBoard = make2DArray(cols, rows);    // make board
 
 window.addEventListener('mousedown', () => {
     drag = true;
 })
-
 
 window.addEventListener('mouseup', () => {
     drag = false;
@@ -75,7 +75,7 @@ function draw() {
         }
     }
 
-    document.body.appendChild(table);   // add board to body
+    boardArea.appendChild(table);   // add board to body
 }
 
 /*
