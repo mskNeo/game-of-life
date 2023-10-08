@@ -1,0 +1,15 @@
+.cell  {
+    border: 1px solid black;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
+
+.alive {
+    background-color: black;
+}
+
+.dead {
+    background-color: transparent;
+}
