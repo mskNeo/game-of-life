@@ -116,7 +116,6 @@ function calculateNeighbors(yIndex, xIndex) {
  */
 function getNextGeneration() {
     let nextGenBoard = make2DArray(cols, rows);
-    // let nextGenBoard = [...lifeBoard];  // why does this not work
 
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
