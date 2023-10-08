@@ -1,13 +1,36 @@
+/*
+ *
+ * TODOS:
+ * - remake grid on resize
+ * - have it automatically stop when simulation doesn't change
+ */
+
 const DEAD = 0;
 const ALIVE = 1;
-const rows = 50;
-const cols = 50;
-const cellSize = 15;
+let rows = 50;
+let cols = 50;
+let cellSize = 15;
 const startBtn = document.getElementById('start');
 const stopBtn = document.getElementById('stop');
 const boardArea = document.getElementById('boardArea');
 let drag = false;
 let lifeBoard = make2DArray(cols, rows);    // make board
+
+function setGrid() {
+    const iw = window.innerWidth;
+    if (iw > 769) {
+        rows = 50;
+        cols = 50;
+        cellSize = 15;
+    } else {
+        rows = 20;
+        cols = 20;
+        cellSize = 20;
+    }
+}
+
+// media size queries, set grid
+window.addEventListener('resize', setGrid);
 
 window.addEventListener('mousedown', () => {
     drag = true;
@@ -143,5 +166,6 @@ function getNextGeneration() {
 }
 
 window.onload = function() {
+    setGrid();
     setup();
 }
