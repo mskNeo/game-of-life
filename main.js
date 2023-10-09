@@ -56,9 +56,11 @@ function setup() {
         if (start) {
             simulation = setInterval(getNextGeneration, 100);
             start = false;
+            toggleBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
         } else {
             clearInterval(simulation);
             start = true;
+            toggleBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
         }
     });
 }

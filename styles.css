@@ -82,6 +82,18 @@ body {
     margin-bottom: 0;
 }
 
+#toggle {
+    padding: 0.3rem 0.5rem;
+    background: transparent;
+    border: 0 solid transparent;
+    font-size: 3rem;
+}
+
+#toggle:hover {
+    cursor: pointer;
+    background: #cacaca;
+}
+
 .cell  {
     border: 1px solid black;
 }
