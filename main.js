@@ -10,10 +10,10 @@ const ALIVE = 1;
 let rows = 50;
 let cols = 50;
 let cellSize = 15;
-const startBtn = document.getElementById('start');
-const stopBtn = document.getElementById('stop');
+const toggleBtn = document.getElementById('toggle');
 const boardArea = document.getElementById('boardArea');
 let drag = false;
+let start = true;
 let lifeBoard = make2DArray(cols, rows);    // make board
 
 function setGrid() {
@@ -52,13 +52,15 @@ function setup() {
     draw();
     let simulation;
 
-    startBtn.addEventListener('click', () => {
-        simulation = setInterval(getNextGeneration, 100);
+    toggleBtn.addEventListener('click', () => {
+        if (start) {
+            simulation = setInterval(getNextGeneration, 100);
+            start = false;
+        } else {
+            clearInterval(simulation);
+            start = true;
+        }
     });
-
-    stopBtn.addEventListener('click', () => {
-        clearInterval(simulation);
-    })
 }
 
 function draw() {
